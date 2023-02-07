@@ -7,8 +7,7 @@ if (primeiroNum == segundoNum) {
         segundoNum = parseInt(prompt("Digite um número diferente"))
     }
     
-}
-
+} 
 let soma = primeiroNum + segundoNum
 
 if (primeiroNum < 10) {
