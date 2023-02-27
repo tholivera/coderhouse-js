@@ -24,18 +24,25 @@ window.onload = function fazerPedido() {
             preco = 12
             break
     }
+    
+    const enderecoEntregaCli = enderecoEntrega();
+    informacoes(lanche, quantidade, enderecoEntregaCli)
+}
 
-    alert("Agora vamos precisar do seu endereço")
+function enderecoEntrega() {
+    alert('Agora vamos precisar do seu endereço');
+
 
     const enderecoEntregaCli = {
-        rua: prompt("Qual a rua da entrega?"),
-        numero: prompt("E o número?"),
-        bairro: prompt("Em bairro fica?"),
-        cep: prompt("Me informe o cep também por favor"),
-        cidade: prompt("Por ultimo, qual a cidade?")
-    }
+        rua: prompt('Qual a rua da entrega?'),
+        numero: prompt('E o número?'),
+        bairro: prompt('Em bairro fica?'),
+        cep: prompt('Me informe o cep também por favor'),
+        cidade: prompt('Por ultimo, qual a cidade?'),
+    };
 
-    informacoes(lanche, quantidade, enderecoEntregaCli)
+
+    return enderecoEntregaCli;
 }
 
 function informacoes(lanche, quantidade, enderecoEntregaCli) {
