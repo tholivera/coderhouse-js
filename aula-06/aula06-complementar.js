@@ -6,6 +6,7 @@ notaAluno.push({aluno:"Thaís", notaPortugues: 8.9, notaMatematica: 9.5, notaGeo
 notaAluno.push({aluno:"Geraldo", notaPortugues: 9.90, notaMatematica: 6.2, notaGeografia: 8.5, notaHistoria: 10})
 notaAluno.push({aluno:"Pedro", notaPortugues: 6.40, notaMatematica: 3.50, notaGeografia: 5.8, notaHistoria: 4.5})
 notaAluno.push({aluno:"Eliana", notaPortugues: 5.50, notaMatematica: 10, notaGeografia: 7.9, notaHistoria: 8.3})
+notaAluno.push({aluno:"Brenno", notaPortugues: 2.50, notaMatematica: 10, notaGeografia: 9.9, notaHistoria: 8.3})
 
 for (const mediaNota of notaAluno) {
     let aluno = mediaNota.aluno
