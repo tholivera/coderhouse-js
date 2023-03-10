@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./aula07.js"></script>
+    <title>Comprar</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+        }
+
+        h3 {
+            text-transform: uppercase;
+        }
+
+
+        .selecionar-pedido,
+        .sidebar {
+            position: relative;
+            top: 50%;
+            background-color: bisque;
+            border-radius: 10px;
+            width: 580px;
+            margin: 50px;
+            padding: 20px 20px;
+        }
+
+        .selecionar-pedido {
+            height: 180px;
+        }
+
+        .sidebar {
+            position: relative;
+            right: 20px;
+            min-height: 180px;
+        }
+
+        .tabela {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .carrinho {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .line-bottom {
+            border-bottom: 2px solid black;
+        }
+
+        .borda {
+            border: 1px solid;
+        }
+
+
+        td, .largura-min {
+            width: 200px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="selecionar-pedido">
+        <h3>Selecionar pedido</h3>
+        <div class="tabela">
+
+
+            <table>
+                <tr>
+                    <th >Produto</th>
+                    <th >Quantidade</th>
+                    <th >Preço</th>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <select id="produtos" name="produtos" onclick="mostrarPreco()" required>
+                                <option id="0" value="">--</option>
+                                <option id="1" value="Duplo Burguer">Duplo Burguer</option>
+                                <option id="2" value="Cheddar Triplo">Cheddar Triplo</option>
+                                <option id="3" value="X-Salada">X-Salada</option>
+                                <option id="4" value="X-Salada Turbinado">X-Salada Turbinado</option>
+                                <option id="5" value="Hamburgão">Hamburgão</option>
+                            </select>
+                    <td> <input id="quantidade" type="number"></td>
+                    <td id="precos" class="largura-min"> R$ 0</td>
+                    <td> <button id="adicionar" type="submit" onclick="adicionarPedido(event)">Adicionar</button></td>
+                    </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="sidebar">
+        <h3>Carrinho</h3>
+        <div class="carrinho">
+            <table class="borda" id="lista">
+                <tr>
+                    <th  class="largura-min">#</th>
+                    <th  class="largura-min">Produto</th>
+                    <th  class="largura-min">Quantidade</th>
+                    <th class="largura-min">Total</th>
+                </tr>
+
+            </table>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
