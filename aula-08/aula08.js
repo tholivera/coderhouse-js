@@ -79,3 +79,8 @@ function excluir(event) {
     let excluirLinha = excluir.parentNode.parentNode
     excluirLinha.remove()
 }
+
+function produtos(nome, preco) {
+    this.nome = nome;
+    this.preco = preco;
+}
