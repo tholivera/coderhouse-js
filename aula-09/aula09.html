@@ -84,9 +84,8 @@
 
       .ul-cardapio {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        justify-items: center;
         list-style: none;
+        margin-left: 100px;
       }
 
       .ul-cardapio .li-cardapio {
@@ -230,6 +229,7 @@
       width: 580px;
       margin: 50px;
       padding: 20px 20px;
+      min-height: 200px;
     }
 
 
@@ -254,14 +254,28 @@
 
     .frase-sucesso {
       color: green;
+    }
+
+    .aviso {
+      color: red;
+    }
+
+    .frase-sucesso, .aviso {
       text-align: center;
       font-weight: bold;
+    }
+
+    main {
+      display: flex;
     }
   </style>
 </head>
 
 <body>
   <main>
+    <div>
+      
+    </div>
     <section class="cardapio">
       <ul class="ul-cardapio">
         <li class="li-cardapio">
@@ -318,33 +332,35 @@
         </li>
       </ul>
     </section>
+    <section id="carrinho" class="sidebar hide">
+
+      <h3>Carrinho</h3>
+      <div class="">
+        <table class="borda" id="lista">
+          <tr class="carrinho">
+            <th class="largura-min">#</th>
+            <th class="largura-cabecalho-produto">Produto</th>
+            <th class="largura-cabecalho">Quantidade</th>
+            <th class="largura-cabecalho">Preço Unitário</th>
+            <th class="largura-cabecalho">Total</th>
+          </tr>
+        </table>
+        <table class="espaco">
+          <tr>
+            <th>Valor total do pedido</th>
+            <th id="total-pedido"></th>
+            <th><button id="btn-confirmar" onclick="finalizarPedido()">Confirmar Pedido</button></th>
+
+          </tr>
+        </table>
+        <p id="frase-sucesso" class=" frase-sucesso hide">Pedido enviado com sucesso!</p>
+        <p id="aviso" class=" aviso hide"></p>
+
+      </div>
+
+    </section>
   </main>
-  <section id="carrinho" class="sidebar hide">
 
-    <h3>Carrinho</h3>
-    <div class="">
-      <table class="borda" id="lista">
-        <tr class="carrinho">
-          <th class="largura-min">#</th>
-          <th class="largura-cabecalho-produto">Produto</th>
-          <th class="largura-cabecalho">Quantidade</th>
-          <th class="largura-cabecalho">Preço Unitário</th>
-          <th class="largura-cabecalho">Total</th>
-        </tr>
-      </table>
-      <table class="espaco">
-        <tr>
-          <th>Valor total do pedido</th>
-          <th id="total-pedido"></th>
-          <th><button id="btn-confirmar" onclick="finalizarPedido()">Confirmar Pedido</button></th>
-
-        </tr>
-      </table>
-      <p id="frase-sucesso" class=" frase-sucesso hide">Pedido enviado com sucesso!</p>
-
-    </div>
-
-  </section>
 </body>
 
 </html>

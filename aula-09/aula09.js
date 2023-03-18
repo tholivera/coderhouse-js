@@ -34,7 +34,7 @@ function comprar(id) {
     let nome = document.getElementsByTagName("h2")[id].innerText
     let precoProduto = preco(id)
     let total = precoProduto * parseInt(quantidade[id].innerHTML)
-    
+
     carrinho.style.display = "block"
 
     const produto = new Produto(nome, precoProduto);
@@ -64,7 +64,7 @@ function comprar(id) {
     const totalPedido = arrayTotal.reduce((total, numeroAtual) => total + numeroAtual)
 
     let exibirTotal = document.getElementById("total-pedido")
-    exibirTotal.innerHTML =  "R$ " + totalPedido
+    exibirTotal.innerHTML = "R$ " + totalPedido
     exibirTotal.className = "total-pedido"
 
     let adicionarBotao = document.createElement("td")
@@ -118,6 +118,18 @@ class Produto {
 
 function finalizarPedido() {
     let fraseSucesso = document.getElementById("frase-sucesso")
+    let aviso = document.getElementById("aviso")
+    let tempo = 11;
 
     fraseSucesso.style.display = "block"
+    aviso.style.display = "block"
+
+    setInterval(function () {
+        tempo--
+        if (tempo <= 0) {
+            location.reload()
+        } else {
+            aviso.innerText = "A tela será recarregada em " + tempo + " segundos"
+        }
+    }, 1000)
 }
