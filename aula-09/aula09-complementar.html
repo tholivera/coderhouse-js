@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./aula09-complementar.js" defer></script>
+    <title>Document</title>
+
+    <style>
+        .hide {
+            display: none;
+        }
+
+        h2 {
+            color: rgb(86, 117, 117);
+            text-align: center;
+        }
+
+        .btn-gerar-piada {
+            background-color: rgb(173, 95, 247);
+            border: 1px solid blueviolet;
+            cursor: pointer;
+
+        }
+
+        .btn-gerar-piada:disabled {
+            background-color: rgb(240, 223, 255);
+            border: 1px solid rgb(224, 191, 255);
+            color: rgb(135, 138, 138);
+            cursor: wait;
+
+        }
+
+        .btn-excluir-piada {
+            background-color: rgb(253, 92, 92);
+            border: 1px solid red;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+
+        button {
+            height: 42px;
+            padding: 0 15px;
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        h2,
+        button {
+            text-transform: uppercase;
+        }
+
+        main {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgb(242, 236, 248);
+            border: 1px solid blueviolet;
+            height: 500px;
+            width: 600px;
+            border-radius: 10px;
+        }
+
+        .card {
+            margin-top: 20px;
+            height: 330px;
+            width: 540px;
+            padding: 15px;
+            background-color: rgb(221, 218, 218);
+            margin: 15px;
+            border-radius: 8px;
+            overflow-y: scroll
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 3px rgb(182, 182, 182);
+            border-radius: 10px;
+        }
+
+
+        ::-webkit-scrollbar-thumb {
+            background: rgb(182, 182, 182);
+            border-radius: 10px;
+        }
+
+        .box-btn {
+            display: flex;
+            justify-content: center;
+        }
+
+        .pergunta {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .resposta {
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h2>Gerador de piadas</h2>
+        <div class="box-btn">
+            <button id="btn-gerar-piada" class="btn-gerar-piada">Gerar Piada</button>
+            <button id="btn-excluir-piada" class="btn-excluir-piada hide">Excluir Piadas</button>
+        </div>
+
+        <div class="conteudo">
+            <div id="card" class="card"></div>
+        </div>
+
+    </main>
+
+
+</body>
+
+</html>
